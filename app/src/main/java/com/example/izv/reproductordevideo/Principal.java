@@ -26,7 +26,7 @@ import java.net.URI;
 public class Principal extends Activity {
 
     private Button b;
-    Uri uri;
+    private Uri uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +50,6 @@ public class Principal extends Activity {
         startActivityForResult(i, 1);
     }
 
-    public void ultimo(View view){
-        Intent i=new Intent(this, Reproductor.class);
-        i.putExtra("uri",uri);
-        startActivity(i);
-        this.finish();
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode==RESULT_OK) {
@@ -68,4 +61,10 @@ public class Principal extends Activity {
         }
     }
 
+    public void ultimo(View view){
+        Intent i=new Intent(this, Reproductor.class);
+        i.putExtra("uri",uri);
+        startActivity(i);
+        this.finish();
+    }
 }

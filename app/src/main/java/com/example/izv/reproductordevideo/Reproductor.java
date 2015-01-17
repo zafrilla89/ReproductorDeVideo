@@ -35,7 +35,6 @@ public class Reproductor extends Activity {
                 getApplicationContext());
         SharedPreferences.Editor ed = pc.edit();
         ed.putString("uri", u.toString());
-        Log.v("aaaaaaaaaaaaaaaaa",u.toString());
         ed.commit();
 
     }

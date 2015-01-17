@@ -38,7 +38,6 @@ public class Principal extends Activity {
         pc = PreferenceManager.getDefaultSharedPreferences(
                 getApplicationContext());
         String ur = pc.getString("uri", "nada");
-        Log.v("AAAAAAAAAAAAAAA",ur);
         if (ur.compareTo("nada")!=0){
             uri= Uri.parse(ur);
             b.setEnabled(true);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ReproductorDeVideo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="seleccionar">Seleccionar archivo</string>
+    <string name="title_activity_reproductor">Reproductor</string>
+    <string name="ultimo">Ultimo video</string>
+
+</resources>

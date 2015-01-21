@@ -38,5 +38,9 @@ public class Reproductor extends Activity {
         reproductor.start();
     }
 
-
+    public void volver (View view){
+        Intent i=new Intent(this, Principal.class);
+        startActivity(i);
+        this.finish();
+    }
 }

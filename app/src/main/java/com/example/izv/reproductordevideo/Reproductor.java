@@ -7,11 +7,8 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 
@@ -28,6 +25,8 @@ public class Reproductor extends Activity {
         Bundle b = getIntent().getExtras();
         if(b !=null ) {
             u=b.getParcelable("uri");
+            MediaController m = new MediaController(this);
+            reproductor.setMediaController(m);
             reproductor.setVideoURI(u);
         }
         SharedPreferences pc;
@@ -36,24 +35,8 @@ public class Reproductor extends Activity {
         SharedPreferences.Editor ed = pc.edit();
         ed.putString("uri", u.toString());
         ed.commit();
-
-    }
-
-    public void reproducir(View view){
         reproductor.start();
     }
 
-    public void pause(View view){
-        reproductor.pause();
-    }
 
-    public void principio (View view){
-        reproductor.resume();
-    }
-
-    public void volver (View view){
-        Intent i=new Intent(this, Principal.class);
-        startActivity(i);
-        this.finish();
-    }
 }
